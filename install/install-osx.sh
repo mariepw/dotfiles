@@ -14,7 +14,7 @@ brew install caskroom/cask/brew-cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 echo "Installing common applications"
-brew cask install google-chrome firefox mou filezilla imageoptim mysqlworkbench sourcetree cakebrew textmate
+brew cask install google-chrome firefox mou filezilla imageoptim tortoisehg cakebrew textmate
 
 echo "Installing Quick Look Plugins"
 brew cask install webpquicklook qlimagesize qlprettypatch quicklook-json qlmarkdown qlcolorcode
@@ -28,18 +28,6 @@ echo "Installing some fonts"
 /bin/sh ./fonts/install.sh
 
 ## TODO :: install Solarized Dark Terminal.app theme and set as default
-
-echo "Installing PHP"
-brew tap josegonzalez/php
-brew tap homebrew/dupes
-
-#brew install php56 --without-apache --with-debug --with-fpm --with-postgresql
-#ln -sfv /usr/local/opt/php56/*.plist ~/Library/LaunchAgents
-#brew install php56-mcrypt php56-xdebug php56-xhprof
-
-echo "Installing Mysql"
-brew install mariadb
-ln -sfv /usr/local/opt/mariadb/*.plist ~/Library/LaunchAgents
 
 ## @ Home
 ######################################################################

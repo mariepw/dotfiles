@@ -1,11 +1,11 @@
 [user]
-	name = Stéphane Goetz
-	email = onigoetz@onigoetz.ch
+	name = Marie P-W
+	email = marie.wermuth@gmail.com
 [core]
 	excludesfile = ~/.gitignore
 	#attributesfile = ~/.gitattributes
 	whitespace = fix,space-before-tab,tab-in-indent,trailing-space
-	editor = mate -w
+	editor = e -w
 	autocrlf = false
 [alias]
 	c = commit -am
@@ -42,5 +42,5 @@
 [url "https://"]
 	insteadOf = git://
 
-#[http]
-#	proxy = http://127.0.0.1:3129
+[http]
+	proxy = http://127.0.0.1:3129

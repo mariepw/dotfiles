@@ -5,9 +5,9 @@
 # Dotfiles directory
 export DOTFILES="$HOME/dotfiles"
 
-# Textmate as default editor
-if command -v mate >/dev/null 2>&1; then
-  export EDITOR="/usr/local/bin/mate -w"
+# Sublime as default editor
+if command -v e >/dev/null 2>&1; then
+  export EDITOR="/usr/local/bin/e -w"
 fi
 
 # Homebrew options
@@ -18,13 +18,6 @@ if command -v brew >/dev/null 2>&1; then
   # Homebrew Cask
   export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 fi
-
-# Java
-#export JAVA6_HOME=$(/usr/libexec/java_home -v 1.6)
-#export JAVA7_HOME=$(/usr/libexec/java_home -v 1.7)
-#export JAVA8_HOME=$(/usr/libexec/java_home -v 1.8)
-#export JAVA_HOME=$JAVA8_HOME
-
 
 ## PATHs
 ################################################################################
@@ -41,8 +34,9 @@ fi
 
 # Load jenv
 if command -v jenv >/dev/null 2>&1; then
-  export PATH="$HOME/.jenv/bin:$PATH"
+  #export PATH="$HOME/.jenv/bin:$PATH"
   eval "$(jenv init -)";
+  export JAVA_HOME="${HOME}/.jenv/versions/`cat ${HOME}/.jenv/version`"
 fi
 
 # Load phpenv
